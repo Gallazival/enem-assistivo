@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ENEM Assistivo</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <script src="./js/jquery-3.3.1.slim.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js" type="module"></script>
 </head>
 <body>
   <div class="container">
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-      Launch
-    </button>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">Launch</button>
 
     <!-- Modal -->
     <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
           <div class="modal-body">
-            <div class="container-fluid">
-              Add rows here
-            </div>
+            <div class="container-fluid">Add rows here</div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,16 +39,12 @@
     </div>
 
     <script>
-      $('#exampleModal').on('show.bs.modal', event => {
+      $('#exampleModal').on('show.bs.modal', (event) => {
         var button = $(event.relatedTarget);
         var modal = $(this);
         // Use above variables to manipulate the DOM
-
       });
     </script>
   </div>
-  <script src="./js/jquery-3.3.1.slim.min.js"></script>
-  <!-- <script src="./js/popper.min.js"></script> -->
-  <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
