@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ENEM Assistivo</title>
-  <link rel="stylesheet" href="./css/reset.css" />
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <script src="./js/jquery-3.3.1.slim.min.js"></script>
   <script src="./js/popper.min.js"></script>
@@ -14,37 +14,61 @@
 </head>
 <body>
   <div class="container">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">Launch</button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">Add rows here</div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save</button>
-          </div>
-        </div>
+    <div class="header">
+      <img src="./img/ifrs.png" alt="logo IFRS" tabindex="0"/>
       </div>
+        <div class="title" tabindex="0">
+          <h1><b>ENEM ASSISTIVO</b></h1>
+          <button type="button" class="btn btn-info">AJUDA</button>
+        </div> 
     </div>
 
-    <script>
-      $('#exampleModal').on('show.bs.modal', (event) => {
-        var button = $(event.relatedTarget);
-        var modal = $(this);
-        // Use above variables to manipulate the DOM
-      });
-    </script>
-  </div>
+    <div class="main">
+      
+      <div class ="desc"><h1>Materia X || Prova 20XX: Questão X</h1></div>
+      <div class ="box">Enunciado</div>
+      
+      <img class="card-img-top" src="..." alt="Descriçao">
+      <div class="card-body">
+      <p class="card-text">Descriçao da imagem do enunciado</p>
+      </div>
+
+      <button type="button" class="btn btn-primary">Repetir enunciado</button>
+    
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">a) Resposta 1
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">b) Resposta 2
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">c) Resposta 3
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">d) Resposta 4
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">e) Resposta 5
+      </label>
+    </div>
+
+    <button type="button" class="btn btn-success">Enviar:</button>
+    <button type="button" class="btn btn-warning">Pular:</button>
+  </div> 
 </body>
 </html>
