@@ -5,51 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENEM Assistivo</title>
-    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/jquery.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/script.js" type="module"></script>
   </head>
   <body>
-    <!-- <div class="container">
-      <div class="row bg-warning">
-        <div class="col d-flex align-items-center justify-content-center">
-          <img src="./img/ifrs.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
-        </div>
-        <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-          <h1 class="text-uppercase font-weight-bold">ENEM Assistivo</h1>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
-            AJUDA
-          </button>
-        </div>
-        <div class="col d-flex align-items-center justify-content-center">
-          <img src="./img/cta.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
-        </div>
-      </div>
-    </div> -->
-    <div class="container bg-neutral-900">
-      <div class="header">
-        <img src="./img/ifrs.png" alt="logo IFRS" tabindex="0" />
-        <div class="title" tabindex="0">
-          <h1><b>ENEM ASSISTIVO</b></h1>
+    <div class="bg-[#41db335e] p-2">
+      <div class="grid grid-cols-5 place-items-center">
+        <img src="./img/cta.png" alt="" class="max-h-24" />
+        <div class="col-span-3 flex flex-col">
+          <h1 class="font-bold uppercase">ENEM ASSISTIVO</h1>
           <button type="button" class="btn btn-info">AJUDA</button>
         </div>
+        <img src="./img/ifrs.png" alt="" class="max-h-24" />
+      </div>
+    </div>
+    <div class="main">
+      <div class="desc"><h1>Materia X || Prova 20XX: Questão X</h1></div>
+      <div class="box">Enunciado</div>
+
+      <img class="card-img-top" src="..." alt="Descriçao" />
+      <div class="card-body">
+        <p class="card-text">Descriçao da imagem do enunciado</p>
       </div>
 
-      <div class="main">
-        <div class="desc"><h1>Materia X || Prova 20XX: Questão X</h1></div>
-        <div class="box">Enunciado</div>
-
-        <img class="card-img-top" src="..." alt="Descriçao" />
-        <div class="card-body">
-          <p class="card-text">Descriçao da imagem do enunciado</p>
-        </div>
-
-        <button type="button" class="btn btn-primary">Repetir enunciado</button>
-      </div>
+      <button type="button" class="btn btn-primary">Repetir enunciado</button>
 
       <div class="form-check">
         <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />a) Resposta 1 </label>
