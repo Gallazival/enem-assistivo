@@ -5,59 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENEM Assistivo</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
     <script src="./js/jquery.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/script.js" type="module"></script>
   </head>
   <body>
-    <div class="bg-[#41db335e] p-2">
-      <div class="grid grid-cols-5 place-items-center">
-        <img src="./img/cta.png" alt="" class="max-h-24" />
-        <div class="col-span-3 flex flex-col">
-          <h1 class="font-bold uppercase">ENEM ASSISTIVO</h1>
-          <button type="button" class="btn btn-info">AJUDA</button>
-        </div>
-        <img src="./img/ifrs.png" alt="" class="max-h-24" />
+    <header class="grid grid-cols-5 place-items-center bg-[#41db335e] p-2">
+      <img src="./img/cta.png" alt="" class="max-h-24" />
+      <div class="col-span-3 flex flex-col">
+        <h1 class="font-bold uppercase">ENEM ASSISTIVO</h1>
+        <button type="button" class="btn btn-info">AJUDA</button>
       </div>
-    </div>
-    <div class="main">
-      <div class="desc"><h1>Materia X || Prova 20XX: Questão X</h1></div>
-      <div class="box">Enunciado</div>
-
-      <img class="card-img-top" src="..." alt="Descriçao" />
-      <div class="card-body">
-        <p class="card-text">Descriçao da imagem do enunciado</p>
+      <img src="./img/ifrs.png" alt="" class="max-h-24" />
+    </header>
+    <main>
+      <div class="wrapper mx-5 space-y-5 p-5">
+        <section class="flex items-center justify-between">
+          <h3>Questão 136 do segundo dia do caderno laranja do ENEM 2017</h3>
+          <div class="flex w-52 items-center justify-between rounded-full border-[1px] border-neutral-300 bg-neutral-100 p-2.5 shadow-md">
+            <a class="text-decoration-none h-9 w-9 cursor-pointer rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <span class="font-bold">Questão 136</span>
+            <a class="text-decoration-none h-9 w-9 cursor-pointer rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </section>
+        <section>
+          <h5>Enunciado:</h5>
+          <div class="questao-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar libero non leo volutpat suscipit. Cras ut sagittis elit. In faucibus rutrum augue ut varius. Quisque pharetra mauris pulvinar magna faucibus, eu dapibus eros vestibulum. Phasellus tincidunt, nulla id dapibus varius, tortor augue pellentesque ipsum, eu molestie quam nisi at quam. Suspendisse potenti. Vestibulum eget risus vel sem posuere pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
+            <p>cubilia curae; Ut velit leo, semper et mauris a, tincidunt feugiat leo. Phasellus placerat tortor sed felis posuere efficitur. Quisque dictum, dolor ac efficitur molestie, sem nibh sagittis lorem, ut lacinia quam orci ac tortor. Nullam placerat pellentesque odio non sollicitudin. Nullam in posuere mauris, id mollis quam. Nam laoreet dignissim erat eu efficitur. Mauris volutpat id ligula ut euismod. Vivamus leo nisi, egestas sit amet pretium vitae, ultrices id odio. Suspendisse nunc justo, cursus</p>
+            <p>at est nec, porttitor scelerisque leo. Mauris ac leo vel ligula pulvinar vehicula. Pellentesque in dignissim metus. Quisque in rhoncus sapien. Nulla vel tellus ut lectus auctor laoreet. Fusce sodales est risus, a venenatis ex lacinia ac. Proin faucibus leo non auctor lacinia.</p>
+          </div>
+          <button type="button" class="btn btn-primary w-64">Repetir enunciado</button>
+        </section>
+        <section>
+          <h5>Alternativas:</h5>
+          <div class="alternativas-wraper mb-3 space-y-2">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="alternativa" id="" value="checkedValue" />
+                Display value
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="alternativa" id="" value="checkedValue" />
+                Display value
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="alternativa" id="" value="checkedValue" />
+                Display value
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="alternativa" id="" value="checkedValue" />
+                Display value
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="alternativa" id="" value="checkedValue" />
+                Display value
+              </label>
+            </div>
+          </div>
+          <button type="button" class="btn btn-success w-64">Enviar</button>
+          <button type="button" class="btn btn-danger w-64">Pular</button>
+        </section>
       </div>
-
-      <button type="button" class="btn btn-primary">Repetir enunciado</button>
-
-      <div class="form-check">
-        <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />a) Resposta 1 </label>
-      </div>
-
-      <div class="form-check">
-        <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />b) Resposta 2 </label>
-      </div>
-
-      <div class="form-check">
-        <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />c) Resposta 3 </label>
-      </div>
-
-      <div class="form-check">
-        <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />d) Resposta 4 </label>
-      </div>
-
-      <div class="form-check">
-        <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />e) Resposta 5 </label>
-      </div>
-
-      <button type="button" class="btn btn-success">Enviar:</button>
-      <button type="button" class="btn btn-warning">Pular:</button>
-    </div>
+    </main>
   </body>
 </html>
