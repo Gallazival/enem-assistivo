@@ -4,4 +4,7 @@
 
 @layer components {
   input, textarea, select { all: revert; }
+  /* :focus {
+    @apply outline outline-1 outline-red-500;
+  } */
 }
