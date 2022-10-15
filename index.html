@@ -16,69 +16,42 @@
     <script src="./js/script.js" type="module"></script>
   </head>
   <body>
-    <header class="grid grid-cols-5 place-items-center bg-[#41db335e] p-2">
+    <header class="grid grid-cols-3 place-items-center bg-[#41db335e] p-2 md:grid-cols-4 lg:grid-cols-5">
       <img src="./img/cta.png" alt="" class="max-h-24" />
-      <div class="col-span-3 flex flex-col">
-        <h1 class="font-bold uppercase">ENEM ASSISTIVO</h1>
+      <div class="flex flex-col items-center md:col-span-2 lg:col-span-3">
+        <span class="text-[1.5rem] font-bold uppercase md:text-[2rem] lg:text-[2.5rem]">ENEM ASSISTIVO</span>
         <button type="button" class="btn btn-info">AJUDA</button>
       </div>
       <img src="./img/ifrs.png" alt="" class="max-h-24" />
     </header>
     <main>
-      <div class="wrapper mx-5 space-y-5 p-5">
-        <section class="flex items-center justify-between" tabindex="0">
-          <h3>Questão 136 do segundo dia do caderno laranja do ENEM 2017</h3>
-          <div class="flex w-52 items-center justify-between rounded-full border-[1px] border-neutral-300 bg-neutral-100 p-2.5 shadow-md">
-            <button class="h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-            <span class="font-bold">Questão 136</span>
-            <button class="h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <div class="wrapper mx-[16px] space-y-5 p-[16px] lg:mx-[32px] lg:p-[32px] xl:mx-[48px] xl:p-[48px]">
+        <section class="flex flex-col items-center justify-between md:flex-row" tabindex="0">
+          <h3 class="titulo-questao">
+            <!-- Título da questão vai aqui -->
+          </h3>
+          <div class="flex w-52 min-w-[13rem] max-w-[13rem] items-center justify-between rounded-full border-[1px] border-neutral-300 bg-neutral-100 p-2.5 shadow-md">
+            <button class="questao-anterior h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+            <span class="numero-questao font-bold">
+              <!-- Número da questão vai aqui -->
+            </span>
+            <button class="questao-seguinte h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
           </div>
         </section>
         <section tabindex="0">
           <h5>Enunciados:</h5>
           <div class="questao-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar libero non leo volutpat suscipit. Cras ut sagittis elit. In faucibus rutrum augue ut varius. Quisque pharetra mauris pulvinar magna faucibus, eu dapibus eros vestibulum. Phasellus tincidunt, nulla id dapibus varius, tortor augue pellentesque ipsum, eu molestie quam nisi at quam. Suspendisse potenti. Vestibulum eget risus vel sem posuere pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
-            <p>cubilia curae; Ut velit leo, semper et mauris a, tincidunt feugiat leo. Phasellus placerat tortor sed felis posuere efficitur. Quisque dictum, dolor ac efficitur molestie, sem nibh sagittis lorem, ut lacinia quam orci ac tortor. Nullam placerat pellentesque odio non sollicitudin. Nullam in posuere mauris, id mollis quam. Nam laoreet dignissim erat eu efficitur. Mauris volutpat id ligula ut euismod. Vivamus leo nisi, egestas sit amet pretium vitae, ultrices id odio. Suspendisse nunc justo, cursus</p>
-            <p>at est nec, porttitor scelerisque leo. Mauris ac leo vel ligula pulvinar vehicula. Pellentesque in dignissim metus. Quisque in rhoncus sapien. Nulla vel tellus ut lectus auctor laoreet. Fusce sodales est risus, a venenatis ex lacinia ac. Proin faucibus leo non auctor lacinia.</p>
+            <!-- Questão vai aqui -->
           </div>
           <button type="button" class="btn btn-primary w-64">Repetir enunciado</button>
         </section>
         <section>
           <h5>Alternativas:</h5>
-          <div class="alternativas-wraper mb-3 space-y-2">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="alternativa" id="A" value="A" />
-                Display value
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="alternativa" id="B" value="B" />
-                Display value
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="alternativa" id="C" value="C" />
-                Display value
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="alternativa" id="D" value="D" />
-                Display value
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="alternativa" id="E" value="E" />
-                Display value
-              </label>
-            </div>
+          <div class="alternativas-wrapper mb-3 space-y-2">
+            <!-- Alternativas vão aqui -->
           </div>
-          <button type="button" class="btn btn-success w-64">Enviar</button>
-          <button type="button" class="btn btn-danger w-64">Pular</button>
+          <button type="button" class="enviar-resposta btn btn-success w-64">Enviar</button>
+          <!-- <button type="button" class="btn btn-danger w-64">Pular</button> -->
         </section>
       </div>
     </main>
