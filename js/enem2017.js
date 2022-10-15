@@ -532,7 +532,7 @@ export const enem2017 = {
       B: `II.`,
       C: `III.`,
       D: `IV.`,
-      E: `V`,
+      E: `V.`,
     },
     _gabarito: `D`,
   },
