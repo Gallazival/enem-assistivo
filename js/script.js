@@ -24,7 +24,7 @@ $(document).ready(function () {
         `<div class="form-check">
           <label class="form-check-label">
             <input type="radio" class="form-check-input" name="alternativa" id="" value="${key}" required />
-            ${enem2017.questao(numero).alternativas[key]}
+            ${key}) ${enem2017.questao(numero).alternativas[key]}
           </label>
         </div>`
       );
