@@ -1,4 +1,4 @@
-import { enem2017 } from './enem2017.js';
+import { enem2017 } from './provas/enem2017.js';
 
 $(document).ready(function () {
   let numero = 136;
