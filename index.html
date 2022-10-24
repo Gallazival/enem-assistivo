@@ -13,44 +13,71 @@
     <script src="./js/script.js" type="module"></script>
   </head>
   <body>
-    <header class="grid grid-cols-3 place-items-center bg-[#41db335e] p-2 md:grid-cols-4 lg:grid-cols-5">
-      <div></div>
-      <div class="flex flex-col items-center md:col-span-2 lg:col-span-3">
-        <span class="text-[1.5rem] font-bold uppercase md:text-[2rem] lg:text-[2.5rem]">ENEM ASSISTIVO</span>
-        <button type="button" class="btn btn-info">AJUDA</button>
+    <header class="container-fluid bg-light pb-3">
+      <div class="row">
+        <div class="col">
+          <img src="./img/ifrs.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+        </div>
+        <div class="col-7 text-center align-self-center">
+          <h1>ENEM ASSISTIVO</h1>
+        </div>
+        <div class="col align-self-center text-right">
+          <button type="button" class="btn btn-secondary">AJUDA</button>
+        </div>
       </div>
-      <img src="./img/ifrs.png" alt="" class="max-h-24" />
+      <div class="row">
+        <div class="col">
+          <nav class="nav nav-pills">
+            <a class="flex-fill text-center nav-link active" href="#!">2017</a>
+            <a class="flex-fill text-center nav-link" href="#!">2018</a>
+            <a class="flex-fill text-center nav-link" href="#!">2019</a>
+            <a class="flex-fill text-center nav-link" href="#!">2020</a>
+            <a class="flex-fill text-center nav-link" href="#!">2021</a>
+          </nav>
+        </div>
+      </div>
     </header>
-    <main>
-      <div class="wrapper mx-[16px] space-y-5 p-[16px] lg:mx-[32px] lg:p-[32px] xl:mx-[48px] xl:p-[48px]">
-        <section class="flex flex-col items-center justify-between md:flex-row" tabindex="0">
-          <h3 class="titulo-questao">
-            <!-- Título da questão vai aqui -->
-          </h3>
-          <div class="flex w-52 min-w-[13rem] max-w-[13rem] items-center justify-between rounded-full border-[1px] border-neutral-300 bg-neutral-100 p-2.5 shadow-md">
-            <button class="questao-anterior h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-            <span class="numero-questao font-bold">
-              <!-- Número da questão vai aqui -->
-            </span>
-            <button class="questao-seguinte h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    <main class="p-3">
+      <h3 class="text-center">Questão 136 do segundo dia do caderno laranja do ENEM 2017</h3>
+      <section class="mb-3">
+        <h4>Enunciados</h4>
+        <article>
+          <p>lorem ipsum</p>
+          <p>dolor</p>
+          <p>sit amet</p>
+        </article>
+        <button type="button" class="btn btn-info">Repetir enunciados</button>
+        <button type="button" class="btn btn-danger">Pular questão</button>
+      </section>
+      <section>
+        <h4>Alternativas</h4>
+        <article class="mb-3">
+          <div class="form-check">
+            <div>
+              <input class="form-check-input" type="radio" name="alternativa" id="A" value="A" />
+              <label class="form-check-label" for="A"> Default radio </label>
+            </div>
+            <div>
+              <input class="form-check-input" type="radio" name="alternativa" id="B" value="B" />
+              <label class="form-check-label" for="B"> Default radio </label>
+            </div>
+            <div>
+              <input class="form-check-input" type="radio" name="alternativa" id="C" value="C" />
+              <label class="form-check-label" for="C"> Default radio </label>
+            </div>
+            <div>
+              <input class="form-check-input" type="radio" name="alternativa" id="D" value="D" />
+              <label class="form-check-label" for="D"> Default radio </label>
+            </div>
+            <div>
+              <input class="form-check-input" type="radio" name="alternativa" id="E" value="E" />
+              <label class="form-check-label" for="E"> Default radio </label>
+            </div>
           </div>
-        </section>
-        <section tabindex="0">
-          <h5>Enunciados:</h5>
-          <div class="questao-content">
-            <!-- Questão vai aqui -->
-          </div>
-          <button type="button" class="btn btn-primary w-64">Repetir enunciado</button>
-        </section>
-        <section>
-          <h5>Alternativas:</h5>
-          <div class="alternativas-wrapper mb-3 space-y-2">
-            <!-- Alternativas vão aqui -->
-          </div>
-          <button type="button" class="enviar-resposta btn btn-success w-64">Enviar</button>
-          <button type="button" class="btn btn-warning w-64">Pular</button>
-        </section>
-      </div>
+        </article>
+        <button type="button" class="btn btn-warning">Questão anterior</button>
+        <button type="button" class="btn btn-success">Enviar resposta</button>
+      </section>
     </main>
   </body>
 </html>
