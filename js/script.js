@@ -1,4 +1,4 @@
-import { enem2017 } from './provas/enem2017.js';
+import enem2017 from './json/enem2017.json' assert {type: 'json'};
 
 $(document).ready(function () {
   'use strict';
@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   function imprimeEnunciados(numero) {
     $('.enunciados').empty();
-    const enunciados = enem2017.questao(numero).enunciados;
+    const enunciados = enem2017[numero].enunciados;
     for (let enunciado of enunciados) {
       $('.enunciados').append(`
         <p>${enunciado}</p>
@@ -15,9 +15,9 @@ $(document).ready(function () {
     }
   }
 
-  function imrpimeAlternativas(numero) {
+  function imprimeAlternativas(numero) {
     $('.alternativas').empty();
-    const alternativas = enem2017.questao(numero).alternativas;
+    const alternativas = enem2017[numero].alternativas;
     for (let letra in alternativas) {
       let alternativa = alternativas[letra];
       $('.alternativas').append(`
@@ -30,5 +30,5 @@ $(document).ready(function () {
   }
 
   imprimeEnunciados(numeroQuestao);
-  imrpimeAlternativas(numeroQuestao);
+  imprimeAlternativas(numeroQuestao);
 });
