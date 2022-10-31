@@ -16,7 +16,7 @@
     <header class="container-fluid bg-light">
       <div class="row">
         <div class="col">
-          <img src="./img/ifrs.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+          <img src="./img/ifrs.png" class="img-fluid" alt="" />
         </div>
         <div class="col-7 text-center align-self-center">
           <h1>ENEM ASSISTIVO</h1>
@@ -37,20 +37,22 @@
         </div>
       </div> -->
     </header>
-    <main class="p-3" tabindex="0">
+    <main class="m-3" tabindex="0">
       <h3 class="text-center" tabindex="0">Questão 136 do segundo dia do caderno laranja do ENEM 2017</h3>
-      <section class="mb-3" tabindex="0">
+      <section tabindex="0">
         <h4 tabindex="0">Enunciados</h4>
         <article class="enunciados" tabindex="0">
           <!-- enunciados vão aqui -->
           <!-- <p>lorem ipsum</p> -->
         </article>
-        <button type="button" class="btn btn-info">Repetir enunciados</button>
-        <button type="button" class="btn btn-danger">Pular questão</button>
+        <p>
+          <button type="button" class="btn btn-info">Repetir enunciados</button>
+          <button type="button" class="btn btn-danger">Pular questão</button>
+        </p>
       </section>
       <section tabindex="0">
         <h4 tabindex="0">Alternativas</h4>
-        <article class="mb-3" tabindex="0">
+        <article tabindex="0">
           <div class="form-check">
             <div class="alternativas">
               <!-- alternativas vão aqui -->
@@ -61,23 +63,36 @@
             </div>
           </div>
         </article>
-        <button type="button" class="btn btn-warning">Questão anterior</button>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCentered">Enviar resposta</button>
+        <p>
+          <button type="button" class="btn btn-warning">Questão anterior</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalResposta">Enviar resposta</button>
+        </p>
       </section>
     </main>
-    <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+    <div class="modal" id="modalResposta" tabindex="-1" role="dialog" aria-labelledby="modalRespostaTitulo" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenteredLabel">Modal title</h5>
+            <h5 class="modal-title" id="modalRespostaTitulo">Questão 136</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <p>Questão 136 alernativa C</p>
+            <p>Resposta correta!</p>
+            <p>
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#exibirResposta" aria-expanded="false" aria-controls="exibirResposta">Exibir resposta</button>
+            </p>
+            <div class="collapse" id="exibirResposta">
+              <div class="card card-body">
+                <!-- Get resposta certa (alternativa + questão) -->
+              </div>
+            </div>
+          </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar à questão</button>
+            <button type="button" class="btn btn-primary">Próxima questão</button>
           </div>
         </div>
       </div>
