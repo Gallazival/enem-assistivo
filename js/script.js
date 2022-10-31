@@ -47,5 +47,7 @@ $(document).ready(function () {
     imprimeAlternativas(numeroQuestao);
   });
 
-  $('.repetir-enunciados').click();
+  $('.repetir-enunciados').click(() => {
+    $('.enunciados').focus();
+  });
 });
