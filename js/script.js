@@ -1,4 +1,4 @@
-import enem2017 from './json/enem2017.json' assert {type: 'json'};
+import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
 $(document).ready(function () {
   'use strict';
@@ -6,6 +6,7 @@ $(document).ready(function () {
   let numeroQuestao = 136;
 
   function imprimeEnunciados(numero) {
+    $('.numero-questao').text(numero);
     $('.enunciados').empty();
     const enunciados = enem2017[numero].enunciados;
     for (let enunciado of enunciados) {
@@ -29,6 +30,22 @@ $(document).ready(function () {
     }
   }
 
-  imprimeEnunciados(numeroQuestao);
-  imprimeAlternativas(numeroQuestao);
+  function verificaQuestao(numero) {
+    $('.numero-questao').empty();
+
+  }
+
+  $('.proxima-questao').click(() => {
+    numeroQuestao++;
+    imprimeEnunciados(numeroQuestao);
+    imprimeAlternativas(numeroQuestao);
+  });
+
+  $('.questao-anterior').click(() => {
+    numeroQuestao--;
+    imprimeEnunciados(numeroQuestao);
+    imprimeAlternativas(numeroQuestao);
+  });
+
+  $('.repetir-enunciados').click();
 });
