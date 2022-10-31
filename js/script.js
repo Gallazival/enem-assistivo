@@ -4,6 +4,34 @@ $(document).ready(function () {
   'use strict';
 
   let numeroQuestao = 136;
+  imprimeEnunciados(numeroQuestao);
+  imprimeAlternativas(numeroQuestao);
+
+  $('.proxima-questao').click(() => {
+    numeroQuestao++;
+    imprimeEnunciados(numeroQuestao);
+    imprimeAlternativas(numeroQuestao);
+    $('.titulo-questao').focus();
+  });
+
+  $('.questao-anterior').click(() => {
+    numeroQuestao--;
+    imprimeEnunciados(numeroQuestao);
+    imprimeAlternativas(numeroQuestao);
+    $('.titulo-questao').focus();
+  });
+
+  $('.repetir-enunciados').click(() => {
+    $('.enunciados').focus();
+  });
+
+  $('.enviar-resposta').click(() => {
+    verificaQuestao(numeroQuestao);
+  });
+
+  $('[data-dismiss]').click(() => {
+    $('.collapse').removeClass('show');
+  });
 
   function imprimeEnunciados(numero) {
     $('.numero-questao').text(numero);
@@ -31,23 +59,15 @@ $(document).ready(function () {
   }
 
   function verificaQuestao(numero) {
-    $('.numero-questao').empty();
-
+    const gabarito = enem2017[numero]._gabarito;
+    const gabaritoResposta = enem2017[numero].alternativas[gabarito];
+    let opcao = document.alternativas.alternativa.value;
+    opcao ? opcao : (opcao = 'não selecionada');
+    let resposta = opcao === gabarito;
+    $('.alternativa-questao').text(opcao);
+    $('.corrige-questao').toggleClass('alert-success', resposta);
+    $('.corrige-questao').toggleClass('alert-danger', !resposta);
+    $('.corrige-questao').html(`<b>Resposta ${resposta ? 'correta' : 'incorreta'}</b>`);
+    $('.resposta-certa').text(`${gabarito}) ${gabaritoResposta}`);
   }
-
-  $('.proxima-questao').click(() => {
-    numeroQuestao++;
-    imprimeEnunciados(numeroQuestao);
-    imprimeAlternativas(numeroQuestao);
-  });
-
-  $('.questao-anterior').click(() => {
-    numeroQuestao--;
-    imprimeEnunciados(numeroQuestao);
-    imprimeAlternativas(numeroQuestao);
-  });
-
-  $('.repetir-enunciados').click(() => {
-    $('.enunciados').focus();
-  });
 });
