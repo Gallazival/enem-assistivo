@@ -38,7 +38,7 @@
       </div> -->
     </header>
     <main class="m-3" tabindex="0">
-      <h3 class="text-center" tabindex="0">Questão 136 do segundo dia do caderno laranja do ENEM 2017</h3>
+      <h3 class="text-center" tabindex="0">Questão <span class="numero-questao"></span> do segundo dia do caderno laranja do ENEM 2017</h3>
       <section tabindex="0">
         <h4 tabindex="0">Enunciados</h4>
         <article class="enunciados" tabindex="0">
@@ -47,12 +47,12 @@
         </article>
         <p>
           <button type="button" class="btn btn-info">Repetir enunciados</button>
-          <button type="button" class="btn btn-danger">Pular questão</button>
+          <button type="button" class="btn btn-danger proxima-questao">Pular questão</button>
         </p>
       </section>
       <section tabindex="0">
         <h4 tabindex="0">Alternativas</h4>
-        <article tabindex="0">
+        <article class="mb-3" tabindex="0">
           <div class="form-check">
             <div class="alternativas">
               <!-- alternativas vão aqui -->
@@ -64,7 +64,7 @@
           </div>
         </article>
         <p>
-          <button type="button" class="btn btn-warning">Questão anterior</button>
+          <button type="button" class="btn btn-warning questao-anterior">Questão anterior</button>
           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalResposta">Enviar resposta</button>
         </p>
       </section>
@@ -73,26 +73,27 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalRespostaTitulo">Questão 136</h5>
+            <h5 class="modal-title" id="modalRespostaTitulo" tabindex="0">Questão <span class="numero-questao"></span> alternativa C</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="sr-only">Fechar modal</span>
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <p>Questão 136 alernativa C</p>
-            <p>Resposta correta!</p>
+          <div class="modal-body" tabindex="0">
+            <p tabindex="0"><b>Resposta correta|incorreta!</b></p>
             <p>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#exibirResposta" aria-expanded="false" aria-controls="exibirResposta">Exibir resposta</button>
+              <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#exibirResposta" aria-expanded="false" aria-controls="exibirResposta">Exibir resposta</button>
             </p>
             <div class="collapse" id="exibirResposta">
               <div class="card card-body">
                 <!-- Get resposta certa (alternativa + questão) -->
+                <!-- <p>Resposta correta: Alternativa ABCDE) ...</p> -->
               </div>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar à questão</button>
-            <button type="button" class="btn btn-primary">Próxima questão</button>
+            <button type="button" class="btn btn-primary proxima-questao">Próxima questão</button>
           </div>
         </div>
       </div>
