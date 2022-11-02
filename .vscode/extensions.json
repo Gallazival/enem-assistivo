@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "esbenp.prettier-vscode",
+    "donjayamanne.jquerysnippets",
     "thekalinga.bootstrap4-vscode",
   ]
 }
