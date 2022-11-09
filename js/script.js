@@ -1,8 +1,6 @@
 import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
 $(document).ready(function () {
-  'use strict';
-
   let numeroQuestao = 136;
   imprimeEnunciados(numeroQuestao);
   imprimeAlternativas(numeroQuestao);
