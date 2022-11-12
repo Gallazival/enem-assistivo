@@ -1,7 +1,9 @@
 import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
 $(document).ready(function () {
+  let prova = enem2017;
   let numeroQuestao = 136;
+
   imprimeEnunciados(numeroQuestao);
   imprimeAlternativas(numeroQuestao);
 
@@ -34,7 +36,7 @@ $(document).ready(function () {
   function imprimeEnunciados(numero) {
     $('.numero-questao').text(numero);
     $('.enunciados').empty();
-    const enunciados = enem2017[numero].enunciados;
+    const enunciados = prova[numero].enunciados;
     for (let enunciado of enunciados) {
       $('.enunciados').append(`
         <p>${enunciado}</p>
@@ -44,7 +46,7 @@ $(document).ready(function () {
 
   function imprimeAlternativas(numero) {
     $('.alternativas').empty();
-    const alternativas = enem2017[numero].alternativas;
+    const alternativas = prova[numero].alternativas;
     for (let letra in alternativas) {
       let alternativa = alternativas[letra];
       $('.alternativas').append(`
@@ -57,8 +59,8 @@ $(document).ready(function () {
   }
 
   function verificaQuestao(numero) {
-    const gabarito = enem2017[numero]._gabarito;
-    const gabaritoResposta = enem2017[numero].alternativas[gabarito];
+    const gabarito = prova[numero]._gabarito;
+    const gabaritoResposta = prova[numero].alternativas[gabarito];
     let opcao = document.alternativas.alternativa.value;
     opcao ? opcao : (opcao = 'não selecionada');
     let resposta = opcao === gabarito;
