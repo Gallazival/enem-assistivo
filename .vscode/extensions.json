@@ -1,7 +1,8 @@
 {
   "recommendations": [
+    "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
     "donjayamanne.jquerysnippets",
-    "thekalinga.bootstrap4-vscode",
+    "thekalinga.bootstrap4-vscode"
   ]
 }

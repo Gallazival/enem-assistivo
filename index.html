@@ -14,74 +14,61 @@
     <script src="./js/script.js" type="module"></script>
   </head>
 
-  <body>
-    <header class="container-fluid bg-light">
-      <div class="row">
-        <div class="col text-left align-self-center">
-          <img src="./img/ifrs.png" class="img-fluid" alt="" tabindex="0" />
-        </div>
-        <div class="col-7 text-center align-self-center">
-          <h1 tabindex="0">ENEM ASSISTIVO</h1>
-        </div>
-        <div class="col text-right align-self-center">
-          <button type="button" class="btn btn-secondary">AJUDA</button>
-        </div>
-      </div>
+  <body class="container bg-light">
+    <header class="container d-flex align-items-center">
+      <img class="w-25" src="./img/ifrs.png" alt="" tabindex="0" />
+      <h1 class="flex-fill text-center" tabindex="0">ENEM ASSITIVO</h1>
+      <button class="w-25 btn btn-dark">AJUDA</button>
     </header>
-
-    <main class="m-3" tabindex="0">
-      <h3 class="text-center titulo-questao" tabindex="0">Questão <span class="numero-questao"></span> do segundo dia do caderno laranja do ENEM 2017</h3>
+    <hr />
+    <main class="container">
+      <h2 tabindex="0">Questão 136 do Enem 2017</h2>
+      <div class="lead"><span class="badge badge-primary" tabindex="0">Matemática</span></div>
+      <hr />
       <section>
-        <h4 tabindex="0">Enunciados</h4>
-        <article class="enunciados" tabindex="0">
-          <!-- enunciados vão aqui -->
-          <!-- <p>lorem ipsum</p> -->
+        <h3 tabindex="0">Enunciados</h3>
+        <article tabindex="0">
+          <!-- <p>Enunciado</p> -->
         </article>
-        <p>
-          <button type="button" class="btn btn-info repetir-enunciados">Repetir enunciados</button>
-          <button type="button" class="btn btn-danger proxima-questao">Pular questão</button>
-        </p>
+        <article>
+          <button class="btn btn-info">Repetir Enunciado</button>
+          <button class="btn btn-danger">Pular questão</button>
+        </article>
       </section>
-
+      <hr />
       <section>
-        <h4 tabindex="0">Alternativas</h4>
-        <article class="mb-3" tabindex="0">
-          <form name="alternativas">
-            <div class="form-check alternativas">
-              <!-- alternativas vão aqui -->
-              <!-- <div>
-                <input class="form-check-input" type="radio" name="alternativa" id="ABCDE" value="ABCDE" />
-                <label class="form-check-label" for="ABCDE"> Default radio </label>
-              </div> -->
+        <h3 tabindex="0">Alternativas</h3>
+        <article>
+          <!-- <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text" tabindex="0">
+                <span>ABCDE)</span>
+              </div>
             </div>
-          </form>
+            <label class="form-control" for="ABCDE" aria-label="" tabindex="0">Resposta</label>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <input type="radio" name="alternativa" id="ABCDE" value="ABCDE" aria-label="" />
+              </div>
+            </div>
+          </div> -->
         </article>
-        <p>
-          <button type="button" class="btn btn-warning questao-anterior">Questão anterior</button>
-          <button type="button" class="btn btn-success enviar-resposta" data-toggle="modal" data-target="#modalResposta">Enviar resposta</button>
-        </p>
+        <article>
+          <button class="btn btn-warning">Questão anterior</button>
+          <button class="btn btn-success" data-toggle="modal" data-target="#enviarResposta">Enviar resposta</button>
+        </article>
       </section>
     </main>
-
-    <div class="modal" id="modalResposta" tabindex="-1" role="dialog" aria-labelledby="modalRespostaTitulo" aria-hidden="true">
+    <div class="modal" id="enviarResposta" tabindex="-1" role="dialog" aria-labelledby="enviarRespostaTitulo" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalRespostaTitulo" tabindex="0">Questão <span class="numero-questao"></span> alternativa <span class="alternativa-questao"></span></h5>
+            <h5 class="modal-title" id="enviarRespostaTitulo">Questao 136 alternativa C</h5>
           </div>
-          <div class="modal-body">
-            <p class="corrige-questao alert" role="alert" tabindex="0"></p>
-            <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#exibirResposta" aria-expanded="false" aria-controls="exibirResposta">Exibir resposta certa</button>
-            <div class="collapse mt-3" id="exibirResposta">
-              <div class="card card-body resposta-certa" tabindex="0">
-                <!-- resposta certa (alternativa + questão) -->
-                <!-- <p>Resposta correta: Alternativa ABCDE) ...</p> -->
-              </div>
-            </div>
-          </div>
+          <div class="modal-body">...</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar à questão</button>
-            <button type="button" class="btn btn-primary proxima-questao" data-dismiss="modal">Próxima questão</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Retornar à questão</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Próxima questão</button>
           </div>
         </div>
       </div>
