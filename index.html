@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ENEM ASSISTIVO</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <script src="./js/jquery.slim.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/script.js" type="module"></script>
-  </head>
 
-  <body class="container bg-light">
-    <header class="container d-flex align-items-center">
-      <img class="w-25" src="./img/ifrs.png" alt="" tabindex="0" />
-      <h1 class="flex-fill text-center" tabindex="0">ENEM ASSITIVO</h1>
-      <button class="w-25 btn btn-dark">AJUDA</button>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENEM ASSISTIVO</title>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <script src="./js/jquery.slim.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/script.js" type="module"></script>
+</head>
+
+<body class="container bg-light">
+  <header class="container d-flex align-items-center">
+    <img class="w-25" src="./img/ifrs.png" alt="" tabindex="0" />
+    <h1 class="flex-fill text-center" tabindex="0">ENEM ASSITIVO</h1>
+    <button class="w-25 btn btn-dark">AJUDA</button>
+  </header>
+  <hr />
+  <main class="container">
+    <h2 id="tituloQuestao" tabindex="0">Questão 136 do Enem 2017</h2>
+    <div class="lead"><span class="badge badge-primary" tabindex="0">Matemática</span></div>
     <hr />
-    <main class="container">
-      <h2 tabindex="0">Questão 136 do Enem 2017</h2>
-      <div class="lead"><span class="badge badge-primary" tabindex="0">Matemática</span></div>
-      <hr />
-      <section>
-        <h3 tabindex="0">Enunciados</h3>
-        <article tabindex="0">
-          <!-- <p>Enunciado</p> -->
-        </article>
-        <article>
-          <button class="btn btn-info">Repetir Enunciado</button>
-          <button class="btn btn-danger">Pular questão</button>
-        </article>
-      </section>
-      <hr />
-      <section>
-        <h3 tabindex="0">Alternativas</h3>
-        <article>
-          <!-- <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text" tabindex="0">
-                <span>ABCDE)</span>
-              </div>
-            </div>
-            <label class="form-control" for="ABCDE" aria-label="" tabindex="0">Resposta</label>
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <input type="radio" name="alternativa" id="ABCDE" value="ABCDE" aria-label="" />
-              </div>
-            </div>
-          </div> -->
-        </article>
-        <article>
-          <button class="btn btn-warning">Questão anterior</button>
-          <button class="btn btn-success" data-toggle="modal" data-target="#enviarResposta">Enviar resposta</button>
-        </article>
-      </section>
-    </main>
-    <div class="modal" id="enviarResposta" tabindex="-1" role="dialog" aria-labelledby="enviarRespostaTitulo" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="enviarRespostaTitulo">Questao 136 alternativa C</h5>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Retornar à questão</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Próxima questão</button>
-          </div>
+    <section>
+      <h3 tabindex="0">Enunciados</h3>
+      <article id="enunciadosQuestao" tabindex="0"></article>
+      <article>
+        <button class="btn btn-info">Repetir Enunciado</button>
+        <button class="btn btn-danger">Pular questão</button>
+      </article>
+    </section>
+    <hr />
+    <section>
+      <h3 tabindex="0">Alternativas</h3>
+      <article id="alternativasQuestao"></article>
+      <article>
+        <button class="btn btn-warning">Questão anterior</button>
+        <button class="btn btn-success" id="enviarResposta" data-toggle="modal" data-target="#respostaCorrigida">Enviar resposta</button>
+      </article>
+    </section>
+  </main>
+  <div class="modal" id="respostaCorrigida" tabindex="-1" role="dialog" aria-labelledby="respostaCorrigidaTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="respostaCorrigidaTitulo" tabindex="0"></h5>
+        </div>
+        <div class="modal-body">
+          <p class="font-weight-bold lead" id="resultadoAlternativaEscolhida" tabindex="0"></p>
+          <button type="button" class="btn btn-info btn-sm" id="exibirRespostaCerta">Exibir resposta certa</button>
+          <p class="mt-2" id="respostaCorreta" tabindex="0" style="display: none;"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Retornar à questão</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Próxima questão</button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

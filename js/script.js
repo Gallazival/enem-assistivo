@@ -2,72 +2,66 @@ import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
 $(document).ready(function () {
   let prova = enem2017;
-  let numeroQuestao = 136;
+  let questao = 136;
 
-  imprimeEnunciados(numeroQuestao);
-  imprimeAlternativas(numeroQuestao);
+  renderizarQuestao(prova, questao);
 
-  $('.proxima-questao').click(() => {
-    numeroQuestao++;
-    imprimeEnunciados(numeroQuestao);
-    imprimeAlternativas(numeroQuestao);
-    $('.titulo-questao').focus();
+  $(document).keydown((e) => {
+    if (e.key === 'Enter' && $(':focus').hasClass('input-group')) {
+      $(':focus').find('input').click();
+    }
+  })
+
+  $('#enviarResposta').click(() => {
+    corrigirQuestao(prova, questao, $('input:checked').val());
   });
 
-  $('.questao-anterior').click(() => {
-    numeroQuestao--;
-    imprimeEnunciados(numeroQuestao);
-    imprimeAlternativas(numeroQuestao);
-    $('.titulo-questao').focus();
-  });
-
-  $('.repetir-enunciados').click(() => {
-    $('.enunciados').focus();
-  });
-
-  $('.enviar-resposta').click(() => {
-    verificaQuestao(numeroQuestao);
+  $('#exibirRespostaCerta').click(() => {
+    $('#respostaCorreta').toggle();
+    if ($('#respostaCorreta').is(':visible')) {
+      $('#respostaCorreta').focus();
+    }
   });
 
   $('[data-dismiss]').click(() => {
-    $('.collapse').removeClass('show');
-  });
+    $('#respostaCorreta').hide();
+  })
 
-  function imprimeEnunciados(numero) {
-    $('.numero-questao').text(numero);
-    $('.enunciados').empty();
-    const enunciados = prova[numero].enunciados;
-    for (let enunciado of enunciados) {
-      $('.enunciados').append(`
-        <p>${enunciado}</p>
-      `);
+  function renderizarQuestao(prova, questao) {
+    const enunciados = prova[questao].enunciados;
+    const alternativas = prova[questao].alternativas;
+    $('#enunciadosQuestao').empty();
+    $('#alternativasQuestao').empty();
+    $('#tituloQuestao').text(`Questão ${questao} do ENEM 2017`);
+    for (const enunciado of enunciados) {
+      $('#enunciadosQuestao').append(`<p>${enunciado}</p>`);
     }
-  }
-
-  function imprimeAlternativas(numero) {
-    $('.alternativas').empty();
-    const alternativas = prova[numero].alternativas;
-    for (let letra in alternativas) {
-      let alternativa = alternativas[letra];
-      $('.alternativas').append(`
-        <div>
-          <input class="form-check-input" type="radio" name="alternativa" id="${letra}" value="${letra}" />
-          <label class="form-check-label" for="${letra}">${alternativa}</label>
+    for (const letra in alternativas) {
+      const alternativa = alternativas[letra];
+      $('#alternativasQuestao').append(`
+        <div class="form-group input-group" tabindex="0">
+          <div class="input-group-prepend">
+            <label for="${letra}" class="input-group-text text-monospace">${letra})</span>
+          </div>
+          <label class="form-control" for="${letra}" aria-label="">${alternativa}</label>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <input type="radio" name="alternativa" id="${letra}" value="${letra}" aria-label="" required tabindex="-1" />
+            </div>
+          </div>
         </div>
       `);
     }
+    const gabarito = prova[questao]._gabarito;
+    const resposta = prova[questao].alternativas[gabarito];
+    $('#respostaCorreta').text(`Respota correta: ${gabarito}) ${resposta}`);
   }
 
-  function verificaQuestao(numero) {
-    const gabarito = prova[numero]._gabarito;
-    const gabaritoResposta = prova[numero].alternativas[gabarito];
-    let opcao = document.alternativas.alternativa.value;
-    opcao ? opcao : (opcao = 'não selecionada');
-    let resposta = opcao === gabarito;
-    $('.alternativa-questao').text(opcao);
-    $('.corrige-questao').toggleClass('alert-success', resposta);
-    $('.corrige-questao').toggleClass('alert-danger', !resposta);
-    $('.corrige-questao').html(`<b>Resposta ${resposta ? 'correta' : 'incorreta'}</b>`);
-    $('.resposta-certa').text(`${gabarito}) ${gabaritoResposta}`);
+  function corrigirQuestao(prova, questao, alternativa) {
+    $('#respostaCorrigidaTitulo').text(`Questão ${questao} alternativa ${alternativa}`);
+    if (prova[questao]._gabarito === alternativa) {
+      return $('#resultadoAlternativaEscolhida').text('Resposta correta!');
+    }
+    return $('#resultadoAlternativaEscolhida').text('Resposta incorreta!');
   }
 });
