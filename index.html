@@ -30,8 +30,8 @@
       <h3 tabindex="0">Enunciados</h3>
       <article id="enunciadosQuestao" tabindex="0"></article>
       <article>
-        <button class="btn btn-info">Repetir Enunciado</button>
-        <button class="btn btn-danger">Pular questão</button>
+        <button class="btn btn-info" onclick="$('#enunciadosQuestao').focus()">Repetir Enunciado</button>
+        <button class="btn btn-danger proximaQuestao">Pular questão</button>
       </article>
     </section>
     <hr />
@@ -39,7 +39,7 @@
       <h3 tabindex="0">Alternativas</h3>
       <article id="alternativasQuestao"></article>
       <article>
-        <button class="btn btn-warning">Questão anterior</button>
+        <button class="btn btn-warning" id="questaoAnterior">Questão anterior</button>
         <button class="btn btn-success" id="enviarResposta" data-toggle="modal" data-target="#respostaCorrigida">Enviar resposta</button>
       </article>
     </section>
@@ -57,7 +57,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Retornar à questão</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Próxima questão</button>
+          <button type="button" class="btn btn-primary proximaQuestao" data-dismiss="modal">Próxima questão</button>
         </div>
       </div>
     </div>

@@ -27,6 +27,14 @@ $(document).ready(function () {
     $('#respostaCorreta').hide();
   })
 
+  $('.proximaQuestao').click(() => {
+    renderizarQuestao(prova, ++questao);
+  });
+
+  $('#questaoAnterior').click(() => {
+    renderizarQuestao(prova, --questao);
+  });
+
   function renderizarQuestao(prova, questao) {
     const enunciados = prova[questao].enunciados;
     const alternativas = prova[questao].alternativas;
@@ -43,7 +51,7 @@ $(document).ready(function () {
           <div class="input-group-prepend">
             <label for="${letra}" class="input-group-text text-monospace">${letra})</span>
           </div>
-          <label class="form-control" for="${letra}" aria-label="">${alternativa}</label>
+          <label class="form-control h-100" for="${letra}" aria-label="">${alternativa}</label>
           <div class="input-group-append">
             <div class="input-group-text">
               <input type="radio" name="alternativa" id="${letra}" value="${letra}" aria-label="" required tabindex="-1" />
@@ -58,6 +66,9 @@ $(document).ready(function () {
   }
 
   function corrigirQuestao(prova, questao, alternativa) {
+    if (!alternativa) {
+      alternativa = 'não escolhida';
+    }
     $('#respostaCorrigidaTitulo').text(`Questão ${questao} alternativa ${alternativa}`);
     if (prova[questao]._gabarito === alternativa) {
       return $('#resultadoAlternativaEscolhida').text('Resposta correta!');
