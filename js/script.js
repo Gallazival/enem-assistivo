@@ -47,17 +47,17 @@ $(document).ready(function () {
     for (const letra in alternativas) {
       const alternativa = alternativas[letra];
       $('#alternativasQuestao').append(`
-        <div class="form-group input-group" tabindex="0">
+        <label class="form-group input-group">
           <div class="input-group-prepend">
-            <label for="${letra}" class="input-group-text text-monospace">${letra})</span>
+            <span class="input-group-text text-monospace">${letra})</span>
           </div>
-          <label class="form-control h-100" for="${letra}" aria-label="">${alternativa}</label>
+          <span id="${letra}" class="form-control h-100">${alternativa}</span>
           <div class="input-group-append">
             <div class="input-group-text">
-              <input type="radio" name="alternativa" id="${letra}" value="${letra}" aria-label="" required tabindex="-1" />
+              <input type="radio" name="alternativa" value="${letra}" aria-describedby="${letra}" required />
             </div>
           </div>
-        </div>
+        </label>
       `);
     }
     const gabarito = prova[questao]._gabarito;
