@@ -1,7 +1,8 @@
 {
   "recommendations": [
-    "bradlc.vscode-tailwindcss",
+    "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
-    "thekalinga.bootstrap4-vscode",
+    "donjayamanne.jquerysnippets",
+    "thekalinga.bootstrap4-vscode"
   ]
 }
