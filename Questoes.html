@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENEM Assistivo</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <script src="./js/jquery.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js" type="module"></script>
+  </head>
+  <body>
+    <header class="grid grid-cols-3 place-items-center bg-[#41db335e] p-2 md:grid-cols-4 lg:grid-cols-5">
+      <!-- <img src="./img/cta.png" alt="" class="max-h-24" /> -->
+      <div></div>
+      <div class="flex flex-col items-center md:col-span-2 lg:col-span-3">
+        <span class="text-[1.5rem] font-bold uppercase md:text-[2rem] lg:text-[2.5rem]">ENEM ASSISTIVO</span>
+        <button type="button" class="btn btn-info">AJUDA</button>
+      </div>
+      <img src="./img/ifrs.png" alt="" class="max-h-24" />
+    </header>
+    <main>
+      <div class="wrapper mx-[16px] space-y-5 p-[16px] lg:mx-[32px] lg:p-[32px] xl:mx-[48px] xl:p-[48px]">
+        <section class="flex flex-col items-center justify-between md:flex-row" tabindex="0">
+          <h3 class="titulo-questao">
+            <!-- Título da questão vai aqui -->
+          </h3>
+          <div class="flex w-52 min-w-[13rem] max-w-[13rem] items-center justify-between rounded-full border-[1px] border-neutral-300 bg-neutral-100 p-2.5 shadow-md">
+            <button class="questao-anterior h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+            <span class="numero-questao font-bold">
+              <!-- Número da questão vai aqui -->
+            </span>
+            <button class="questao-seguinte h-9 w-9 rounded-full border-[1px] border-neutral-900 p-1 text-center text-black hover:bg-black hover:text-white focus:bg-black focus:text-white"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </section>
+        <section tabindex="0">
+          <h5>Enunciados:</h5>
+          <div class="questao-content">
+            <!-- Questão vai aqui -->
+          </div>
+          <button type="button" class="btn btn-primary w-64">Repetir enunciado</button>
+        </section>
+        <section>
+          <h5>Alternativas:</h5>
+          <div class="alternativas-wrapper mb-3 space-y-2">
+            <!-- Alternativas vão aqui -->
+          </div>
+          <button type="button" class="enviar-resposta btn btn-success w-64">Enviar</button>
+          <button type="button" class="btn btn-warning w-64">Pular</button>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
