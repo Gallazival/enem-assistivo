@@ -1,33 +1,78 @@
-import { enem2017 } from './enem2017.js';
+import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
 $(document).ready(function () {
-  let numero = 136;
-  questao(numero);
-  $('.questao-anterior').click(() => {
-    if (numero === 136) return;
-    questao(--numero);
-  });
-  $('.questao-seguinte').click(() => {
-    if (numero === 180) return;
-    questao(++numero);
-  });
-  $('.enviar-resposta').click(() => alert(enem2017.corrige(numero, $('input:checked').val()) ? 'Correta' : 'Errada'));
-  $('.enviar-resposta').click(() => $('.alert').alert());
-  function questao(numero) {
-    $('.titulo-questao').text(`Questão ${numero} do segundo dia do caderno laranja do ENEM 2017`);
-    $('.numero-questao').text(`Questão ${numero}`);
-    $('.questao-content').html(enem2017.questao(numero).enunciados.map((enunciado) => `<p>${enunciado}</p>`));
-    $('.alternativas-wrapper').empty();
-    for (let i = 0; i < 5; i++) {
-      let key = ['A', 'B', 'C', 'D', 'E'][i];
-      $('.alternativas-wrapper').append(
-        `<div class="form-check">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="alternativa" id="" value="${key}" required />
-            ${key}) ${enem2017.questao(numero).alternativas[key]}
-          </label>
-        </div>`
-      );
+  let prova = enem2017;
+  let questao = 136;
+
+  renderizarQuestao(prova, questao);
+
+  $(document).keydown((e) => {
+    if (e.key === 'Enter' && $(':focus').hasClass('input-group')) {
+      $(':focus').find('input').click();
     }
+  })
+
+  $('#enviarResposta').click(() => {
+    corrigirQuestao(prova, questao, $('input:checked').val());
+  });
+
+  $('#exibirRespostaCerta').click(() => {
+    $('#respostaCorreta').toggle();
+    if ($('#respostaCorreta').is(':visible')) {
+      $('#respostaCorreta').focus();
+    }
+  });
+
+  $('[data-dismiss]').click(() => {
+    $('#respostaCorreta').hide();
+  })
+
+  $('.proximaQuestao').click(() => {
+    renderizarQuestao(prova, ++questao);
+  });
+
+  $('#questaoAnterior').click(() => {
+    renderizarQuestao(prova, --questao);
+  });
+
+  function renderizarQuestao(prova, questao) {
+    const enunciados = prova[questao].enunciados;
+    const alternativas = prova[questao].alternativas;
+    $('#enunciadosQuestao').empty();
+    $('#alternativasQuestao').empty();
+    $('#tituloQuestao').text(`Questão ${questao} do ENEM 2017`);
+    for (const enunciado of enunciados) {
+      $('#enunciadosQuestao').append(`<p>${enunciado}</p>`);
+    }
+    for (const letra in alternativas) {
+      const alternativa = alternativas[letra];
+      $('#alternativasQuestao').append(`
+        <label class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text text-monospace">${letra})</span>
+          </div>
+          <span id="${letra}" class="form-control h-100">${alternativa}</span>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <input type="radio" name="alternativa" value="${letra}" aria-describedby="${letra}" required />
+            </div>
+          </div>
+        </label>
+      `);
+    }
+    const gabarito = prova[questao]._gabarito;
+    const resposta = prova[questao].alternativas[gabarito];
+    $('#respostaCorreta').text(`Respota correta: ${gabarito}) ${resposta}`);
+  }
+
+  function corrigirQuestao(prova, questao, alternativa) {
+    if (!alternativa) {
+      alternativa = 'não escolhida';
+    }
+    $('#respostaCorrigidaTitulo').text(`Questão ${questao} alternativa ${alternativa}`);
+    if (prova[questao]._gabarito === alternativa) {
+      return $('#resultadoAlternativaEscolhida').text('Resposta correta!');
+    }
+    return $('#resultadoAlternativaEscolhida').text('Resposta incorreta!');
   }
 });
