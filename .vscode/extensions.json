@@ -1,8 +1,8 @@
 {
   "recommendations": [
+    "AnbuselvanRocky.bootstrap5-vscode",
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
-    "donjayamanne.jquerysnippets",
-    "thekalinga.bootstrap4-vscode"
+    "donjayamanne.jquerysnippets"
   ]
 }
