@@ -27,25 +27,25 @@
     <div class="row mb-3">
       <article class="col">
         <label for="buscarAno" class="form-label">Buscar questões por ano da prova</label>
-        <input name="ano" form="buscar" class="form-control" list="questoesAno" id="buscarAno" placeholder="Exemplo: 2020, 2021, 2022..." />
-        <datalist id="questoesAno">
-          <option value="2017"></option>
-          <!-- <option value="2018"></option> -->
-          <!-- <option value="2019"></option> -->
-          <!-- <option value="2020"></option> -->
-          <!-- <option value="2021"></option> -->
-          <!-- <option value="2022"></option> -->
-        </datalist>
+        <select name="ano" form="buscar" class="form-select" id="buscarAno">
+          <option value="">Todos os anos</option>
+          <option value="2017">2017</option>
+          <!-- <option value="2018">2018</option> -->
+          <!-- <option value="2019">2019</option> -->
+          <!-- <option value="2020">2020</option> -->
+          <!-- <option value="2021">2021</option> -->
+          <!-- <option value="2022">2022</option> -->
+        </select>
       </article>
       <article class="col">
         <label for="buscarArea" class="form-label">Buscar questões por área de conhecimento</label>
-        <input name="area" form="buscar" class="form-control" list="areasConhecimento" id="buscarArea" placeholder="Exemplo: Matemática e suas Tecnologias" />
-        <datalist id="areasConhecimento">
-          <!-- <option value="Linguagens, Códigos e suas Tecnologias"></option> -->
-          <!-- <option value="Ciências Humanas e suas Tecnologias"></option> -->
-          <option value="Ciências da Natureza e suas Tecnologias"></option>
-          <option value="Matemática e suas Tecnologias"></option>
-        </datalist>
+        <select name="area" form="buscar" class="form-select" id="buscarArea">
+          <option value="">Todas as áreas</option>
+          <!-- <option value="Linguagens">Linguagens, Códigos e suas Tecnologias</option> -->
+          <!-- <option value="Humanas">Ciências Humanas e suas Tecnologias</option> -->
+          <!-- <option value="Natureza">Ciências da Natureza e suas Tecnologias</option> -->
+          <option value="Matemática">Matemática e suas Tecnologias</option>
+        </select>
       </article>
     </div>
     <div class="row mb-3">
@@ -59,7 +59,7 @@
       <article class="col">
         <label for="buscarConteudo" class="form-label">Buscar questões por conteúdo</label>
         <input name="conteudo" form="buscar" class="form-control" list="questoesConteudo" id="buscarConteudo" placeholder="Exemplo: Gramática, Geometria, Corpo humano..." disabled />
-        <datalist id="questoesConteudo"> </datalist>
+        <datalist id="questoesConteudo"></datalist>
       </article>
     </div>
     <article class="text-end">
