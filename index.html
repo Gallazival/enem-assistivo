@@ -1,59 +1,93 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ENEM ASSISTIVO</title>
-  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  <script src="./js/jquery.slim.min.js"></script>
-  <script src="./js/popper.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/script.js" type="module"></script>
+  <title>Enem Assistivo</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="js/jquery.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js" type="module"></script>
 </head>
 
-<body class="container-fluid wrapper bg-light">
-  <header class="container d-flex align-items-center">
-    <img class="w-25" src="./img/ifrs.png" alt="" tabindex="0" />
-    <h1 class="flex-fill text-center" tabindex="0">ENEM ASSITIVO</h1>
-    <button class="w-25 btn btn-dark" data-toggle="modal" data-target="#modalAjuda">AJUDA</button>
+<body class="min-vh-100 bg-light d-flex flex-column">
+  <header class="mt-3 container d-flex align-items-center">
+    <img src="img/ifrs.png" class="img-fluid w-25" alt="Logotipo do Instituto Federal do Rio Grande do Sul (IFRS)" />
+    <h1 class="flex-fill text-center">ENEM ASSISTIVO</h1>
+    <button type="button" class="w-25 btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#menuAjuda">Ajuda</button>
   </header>
   <hr />
-  <main class="container">
-    <h2 class="mt-5 d-flex justify-content-center" id="intro" tabindex="0">Escolha o método de seleção:</h2>
-    <article class="d-flex justify-content-center">
-      <button class="m-3 mb-5 btn btn-dark btn-lg" id="prova">Navegar por provas</button>
-      <button class="m-3 mb-5 btn btn-dark btn-lg" id="conteudo">Navegar por conteúdo</button>
-    </article>
-    <hr />
-    <h2 class="mt-5 d-flex justify-content-center text-center" id="intro" tabindex="0">Digite o nome do conteúdo:</h2>
-    <div class="mt-5 input-group d-flex justify-content-center text-center">
-      <div id="navbar-search-autocomplete " class="form-outline">
-        <label for="form1" class="form-label">Digite aqui:</label>
-        <input type="search" id="form1" class="mb-5 form-control form-control-lg" placeholder="Exemplo:" />
-      </div>
+  <main class="container flex-grow-1 d-flex flex-column justify-content-center">
+    <h2>Buscar questões do Enem</h2>
+    <p class="lead">Use as entradas de texto abaixo para filtrar seu resultado</p>
+    <div class="row mb-3">
+      <article class="col">
+        <label for="buscarAno" class="form-label">Buscar questões por ano da prova</label>
+        <input name="ano" form="buscar" class="form-control" list="questoesAno" id="buscarAno" placeholder="Exemplo: 2020, 2021, 2022..." />
+        <datalist id="questoesAno">
+          <option value="2017"></option>
+          <!-- <option value="2018"></option> -->
+          <!-- <option value="2019"></option> -->
+          <!-- <option value="2020"></option> -->
+          <!-- <option value="2021"></option> -->
+          <!-- <option value="2022"></option> -->
+        </datalist>
+      </article>
+      <article class="col">
+        <label for="buscarArea" class="form-label">Buscar questões por área de conhecimento</label>
+        <input name="area" form="buscar" class="form-control" list="areasConhecimento" id="buscarArea" placeholder="Exemplo: Matemática e suas Tecnologias" />
+        <datalist id="areasConhecimento">
+          <!-- <option value="Linguagens, Códigos e suas Tecnologias"></option> -->
+          <!-- <option value="Ciências Humanas e suas Tecnologias"></option> -->
+          <option value="Ciências da Natureza e suas Tecnologias"></option>
+          <option value="Matemática e suas Tecnologias"></option>
+        </datalist>
+      </article>
     </div>
-    <hr />
+    <div class="row mb-3">
+      <article class="col">
+        <label for="buscarMateria" class="form-label">Buscar questões por matéria</label>
+        <input name="materia" form="buscar" class="form-control" list="questoesMateria" id="buscarMateria" placeholder="Exemplo: Português, Matemática, Biologia..." disabled />
+        <datalist id="questoesMateria">
+          <option value="Matemática"></option>
+        </datalist>
+      </article>
+      <article class="col">
+        <label for="buscarConteudo" class="form-label">Buscar questões por conteúdo</label>
+        <input name="conteudo" form="buscar" class="form-control" list="questoesConteudo" id="buscarConteudo" placeholder="Exemplo: Gramática, Geometria, Corpo humano..." disabled />
+        <datalist id="questoesConteudo"> </datalist>
+      </article>
+    </div>
+    <article class="text-end">
+      <form id="buscar" method="get" action="prova.html">
+        <button type="reset" class="btn btn-secondary">Limpar filtros</button>
+        <button type="submit" class="btn btn-primary">Buscar questões</button>
+      </form>
+    </article>
   </main>
-  <div class="modal" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalElementoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div class="modal" id="menuAjuda" tabindex="-1" aria-labelledby="descricaoMenu" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header justify-content-center">
-          <h5 class="modal-title" id="modalElementoLabel" tabindex="0">Ajuda</h5>
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="descricaoMenu">Menu de ajuda</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </div>
         <div class="modal-body">
-          <!-- <ul tabindex="0">
-            <li>Use os atalhos Tab e Shift + Tab para navegação padrão.</li>
-            <li>Use o atalho Ctrl + Alt + T para pular ao começo da questão.</li>
-            <li>Use o atalho Ctrl + Alt + Setas do teclado para navegar entre os elementos da questão.</li>
-            <li>Se precisar revisar esta informação, aperte Alt + H.</li>
-          </ul> -->
+          <h2 class="fs-5">Controles:</h2>
+          <ul>
+            <li>Use <kbd>&uarr;</kbd>, <kbd>&darr;</kbd>, <kbd>&larr;</kbd> e <kbd>&rarr;</kbd> para navegar nos elementos da página.</li>
+            <li>Use <kbd>Enter</kbd> para interagir com botões e formulários.</li>
+            <li>Use <kbd>h</kbd> para pular para o próximo cabeçalho e <kbd>Shift</kbd> + <kbd>h</kbd> para voltar ao cabeçalho anterior.</li>
+            <li>Use <kbd>b</kbd> para pular para o próximo botão e <kbd>Shift</kbd> + <kbd>b</kbd> para voltar ao botão anterior.</li>
+            <li>Use <kbd>f</kbd> para pular para o próximo formulário e <kbd>Shift</kbd> + <kbd>f</kbd> para voltar ao formulário anterior.</li>
+          </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
