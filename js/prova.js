@@ -2,13 +2,22 @@ import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
 $(document).ready(function () {
 
-  const questoes = enem2017.map((n) => {
-    if (n.filtros.questao === "2017") {
-      return n;
+  const questoes = [];
+
+  Object.keys(enem2017).forEach((key) => {
+    if (enem2017[key].filtros.ano === '2017') {
+      questoes.push(enem2017[key]);
     }
   });
 
   console.table(questoes);
+  console.table(Object.entries(enem2017));
+
+  // const questoes = enem2017.map((n) => {
+  //   if (n.filtros.questao === "2017") {
+  //     return n;
+  //   }
+  // });
 
   // let prova = enem2017;
   // let questao = 136;

@@ -1,13 +1,11 @@
-$(document).ready(function () {
-  const buscar = new Worker('js/buscar.js', {
-    type: 'module',
-  });
+import enem2017 from './json/enem2017.json' assert { type: 'json' };
 
-  const filtros = JSON.parse(sessionStorage.getItem('filtros'));
+onmessage = (msg) => {
+  const ano = msg.data.ano;
+  const area = msg.data.area;
+  const materia = msg.data.materia;
+  const conteudo = msg.data.conteudo;
+  postMessage(enem2017['136']._gabarito);
+};
 
-  buscar.onmessage = (msg) => {
-    // alert(msg.data);
-  };
 
-  buscar.postMessage(filtros);
-});
