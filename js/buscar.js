@@ -6,7 +6,7 @@ $(document).ready(function () {
   const filtros = JSON.parse(sessionStorage.getItem('filtros'));
 
   buscar.onmessage = (msg) => {
-    // alert(msg.data);
+    console.table(msg.data);
   };
 
   buscar.postMessage(filtros);
