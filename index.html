@@ -24,9 +24,9 @@
   <main class="container flex-grow-1 d-flex flex-column justify-content-center">
     <h2>Buscar questões do Enem</h2>
     <p class="lead">Use as entradas de texto abaixo para filtrar seu resultado.</p>
-    <div class="row mb-3">
+    <section class="row mb-3">
       <article class="col">
-        <label for="buscarAno" class="form-label">Buscar questões por ano da prova</label>
+        <label for="buscarAno" class="form-label">Buscar questões por ano da prova:</label>
         <select name="ano" form="buscar" class="form-select" id="buscarAno">
           <option value="">Todos os anos</option>
           <option value="2017">2017</option>
@@ -38,36 +38,36 @@
         </select>
       </article>
       <article class="col">
-        <label for="buscarArea" class="form-label">Buscar questões por área de conhecimento</label>
+        <label for="buscarArea" class="form-label">Buscar questões por área de conhecimento:</label>
         <select name="area" form="buscar" class="form-select" id="buscarArea">
           <option value="">Todas as áreas</option>
-          <!-- <option value="Linguagens">Linguagens, Códigos e suas Tecnologias</option> -->
-          <!-- <option value="Humanas">Ciências Humanas e suas Tecnologias</option> -->
-          <!-- <option value="Natureza">Ciências da Natureza e suas Tecnologias</option> -->
-          <option value="Matemática">Matemática e suas Tecnologias</option>
+          <!-- <option value="Linguagens, Códigos e suas Tecnologias">Linguagens, Códigos e suas Tecnologias</option> -->
+          <!-- <option value="Ciências Humanas e suas Tecnologias">Ciências Humanas e suas Tecnologias</option> -->
+          <!-- <option value="Ciências da Natureza e suas Tecnologias">Ciências da Natureza e suas Tecnologias</option> -->
+          <option value="Matemática e suas Tecnologias">Matemática e suas Tecnologias</option>
         </select>
       </article>
-    </div>
-    <div class="row mb-3">
+    </section>
+    <section class="row mb-3">
       <article class="col">
-        <label for="buscarMateria" class="form-label">Buscar questões por matéria</label>
+        <label for="buscarMateria" class="form-label">Buscar questões por matéria:</label>
         <input name="materia" form="buscar" class="form-control" list="questoesMateria" id="buscarMateria" placeholder="Exemplo: Português, Matemática, Biologia..." disabled />
         <datalist id="questoesMateria">
           <option value="Matemática"></option>
         </datalist>
       </article>
       <article class="col">
-        <label for="buscarConteudo" class="form-label">Buscar questões por conteúdo</label>
+        <label for="buscarConteudo" class="form-label">Buscar questões por conteúdo:</label>
         <input name="conteudo" form="buscar" class="form-control" list="questoesConteudo" id="buscarConteudo" placeholder="Exemplo: Gramática, Geometria, Corpo humano..." disabled />
         <datalist id="questoesConteudo"></datalist>
       </article>
-    </div>
-    <article class="text-end">
+    </section>
+    <section class="text-end">
       <form id="buscar" method="get" action="prova.html">
         <button type="reset" class="btn btn-secondary">Limpar filtros</button>
         <button type="submit" class="btn btn-primary">Buscar questões</button>
       </form>
-    </article>
+    </section>
   </main>
   <div class="modal" id="menuAjuda" tabindex="-1" aria-labelledby="descricaoMenu" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
