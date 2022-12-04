@@ -12,7 +12,14 @@
       "D": "1",
       "E": "0"
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "136",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "137": {
     "enunciados": [
@@ -26,7 +33,14 @@
       "D": "320.",
       "E": "400."
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "137",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "138": {
     "enunciados": [
@@ -42,7 +56,14 @@
       "D": "0,40.",
       "E": "0,30."
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "138",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "139": {
     "enunciados": [
@@ -58,7 +79,14 @@
       "D": "4.",
       "E": "5."
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "139",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "140": {
     "enunciados": [
@@ -75,7 +103,14 @@
       "D": "IV.",
       "E": "V."
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "140",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "141": {
     "enunciados": [
@@ -90,7 +125,14 @@
       "D": "36",
       "E": "28"
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "141",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "142": {
     "enunciados": [
@@ -104,7 +146,14 @@
       "D": "0,600",
       "E": "0,800"
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "142",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "143": {
     "enunciados": [
@@ -118,7 +167,14 @@
       "D": "19 horas e 19 horas 10 minutos.",
       "E": "18 horas 40 minutos e 19 horas."
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "143",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "144": {
     "enunciados": [
@@ -133,7 +189,14 @@
       "D": "P vezes, abre colchete, fração com numerador 1, sobre denominador, abre parêntese, 1 mais fração com numerador i sobre denominador 100, fecha parêntese; mais fração de numerador 1 sobre denominador, abre parêntese 1 mais fração de numerador 2i sobre denominador 100, fecha parêntese; mais fração com numerador 1, sobre denominador, abre parêntese, 1 mais fração com numerador 3i sobre denominador 100, fecha parêntese; fecha colchete.",
       "E": "P vezes, abre colchete, fração com numerador 1, sobre denominador, abre parêntese, 1 mais fração com numerador i sobre denominador 100, fecha parêntese; mais fração de numerador 1 sobre denominador, abre parêntese, 1 mais fração de numerador i sobre denominador 100, fecha parêntese, elevado ao quadrado; mais fração com numerador 1, sobre denominador, abre parêntese, 1 mais fração com numerador i sobre denominador 100, fecha parêntese, elevado ao cubo; fecha colchete."
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "144",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "145": {
     "enunciados": [
@@ -149,7 +212,14 @@
       "D": "16.",
       "E": "17."
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "145",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "146": {
     "enunciados": [
@@ -165,7 +235,14 @@
       "D": "70 por cento",
       "E": "86 por cento"
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "146",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "147": {
     "enunciados": [
@@ -183,7 +260,14 @@
       "D": "270 graus no sentido anti-horário.",
       "E": "315 graus no sentido horário."
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "147",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "148": {
     "enunciados": [
@@ -201,7 +285,14 @@
       "D": "8,25.",
       "E": "9,00."
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "148",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "149": {
     "enunciados": [
@@ -217,7 +308,14 @@
       "D": "6 elevado a 4",
       "E": "4 elevado a 6"
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "149",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "150": {
     "enunciados": [
@@ -231,7 +329,14 @@
       "D": "32,25.",
       "E": "49,50."
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "150",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "151": {
     "enunciados": [
@@ -251,7 +356,14 @@
       "D": "P4",
       "E": "P5"
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "151",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "152": {
     "enunciados": [
@@ -265,7 +377,14 @@
       "D": "20",
       "E": "25"
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "152",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "153": {
     "enunciados": [
@@ -281,7 +400,14 @@
       "D": "36",
       "E": "40"
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "153",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "154": {
     "enunciados": [
@@ -296,7 +422,14 @@
       "D": "prisma quadrangular reto.",
       "E": "prisma triangular reto."
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "154",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "155": {
     "enunciados": [
@@ -312,7 +445,14 @@
       "D": "S.",
       "E": "T."
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "155",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "156": {
     "enunciados": [
@@ -328,7 +468,14 @@
       "D": "Descrição do gráfico: Gráfico cartesiano. O eixo horizontal representa o volume v e o eixo vertical representa a altura h. O gráfico representa três segmentos de retas. O primeiro é crescente, partindo da origem dos eixos; seguido por um segundo, paralelo ao eixo horizontal; seguido por um terceiro, pouco acentuado, para cima e para a direita.",
       "E": "Descrição do gráfico: Gráfico cartesiano. O eixo horizontal representa o volume v e o eixo vertical representa a altura h. O gráfico representa uma curva crescente com concavidade para baixo, partindo da origem dos eixos."
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "156",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "157": {
     "enunciados": [
@@ -349,7 +496,14 @@
       "D": "4,02",
       "E": "4,20"
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "157",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "158": {
     "enunciados": [
@@ -363,7 +517,14 @@
       "D": "35.",
       "E": "46."
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "158",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "159": {
     "enunciados": [
@@ -378,7 +539,14 @@
       "D": "apenas os alunos X e Z.",
       "E": "os alunos X, Y e Z."
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "159",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "160": {
     "enunciados": [
@@ -395,7 +563,14 @@
       "D": "arco de circunferência.",
       "E": "ramo de hipérbole."
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "160",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "161": {
     "enunciados": [
@@ -411,7 +586,14 @@
       "D": "4,40",
       "E": "4,45"
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "161",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "162": {
     "enunciados": [
@@ -425,7 +607,14 @@
       "D": "Quatro sobre um.",
       "E": "Três sobre quatro."
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "162",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "163": {
     "enunciados": [
@@ -443,7 +632,14 @@
       "D": "IV.",
       "E": "V."
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "163",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "164": {
     "enunciados": [
@@ -459,7 +655,14 @@
       "D": "4,080.",
       "E": "4,100."
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "164",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "165": {
     "enunciados": [
@@ -473,7 +676,14 @@
       "D": "6 250.",
       "E": "10 000."
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "165",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "166": {
     "enunciados": [
@@ -492,7 +702,14 @@
       "D": "IV.",
       "E": "V."
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "166",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "167": {
     "enunciados": [
@@ -507,7 +724,14 @@
       "D": "360",
       "E": "972"
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "167",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "168": {
     "enunciados": [
@@ -522,7 +746,14 @@
       "D": "25 e 25",
       "E": "50 e 50"
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "168",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "169": {
     "enunciados": [
@@ -536,7 +767,14 @@
       "D": "20 vezes 0,075.",
       "E": "20 vezes 0,75."
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "169",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "170": {
     "enunciados": [
@@ -551,7 +789,14 @@
       "D": "7,7 por cento",
       "E": "7,6 por cento"
     },
-    "_gabarito": "B"
+    "_gabarito": "B",
+    "filtros": {
+      "questao": "170",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "171": {
     "enunciados": [
@@ -565,7 +810,14 @@
       "D": "Fração: No numerador: 2 elevado a 90; No denominador: 3 elevado a 100",
       "E": "Fração: No numerador: 2; No denominador: 3 elevado a 10"
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "171",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "172": {
     "enunciados": [
@@ -581,7 +833,14 @@
       "D": "523.",
       "E": "672."
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "172",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "173": {
     "enunciados": [
@@ -596,7 +855,14 @@
       "D": "5.",
       "E": "6."
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "173",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "174": {
     "enunciados": [
@@ -613,7 +879,14 @@
       "D": "15 graus Celsius",
       "E": "19 graus Celsius"
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "174",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "175": {
     "enunciados": [
@@ -629,7 +902,14 @@
       "D": "300 , 1 200 e 2 700.",
       "E": "600 , 2 400 e 5 400."
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "175",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "176": {
     "enunciados": [
@@ -645,7 +925,14 @@
       "D": "Fração: no numerador 25 e no denominador 3",
       "E": "Fração: no numerador 75 e no denominador 2"
     },
-    "_gabarito": "D"
+    "_gabarito": "D",
+    "filtros": {
+      "questao": "176",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "177": {
     "enunciados": [
@@ -660,7 +947,14 @@
       "D": "W.",
       "E": "U."
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "177",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "178": {
     "enunciados": [
@@ -678,7 +972,14 @@
       "D": "Fração: no numerador 2 e no denominador 15",
       "E": "Fração: no numerador 8 e no denominador 35"
     },
-    "_gabarito": "E"
+    "_gabarito": "E",
+    "filtros": {
+      "questao": "178",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "179": {
     "enunciados": [
@@ -693,7 +994,14 @@
       "D": "P de t é igual a 99 mais 21 vezes cosseno abre parêntese t fecha parêntese.",
       "E": "P de t é igual a 78 mais 42 vezes cosseno abre parêntese t fecha parêntese."
     },
-    "_gabarito": "A"
+    "_gabarito": "A",
+    "filtros": {
+      "questao": "179",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   },
   "180": {
     "enunciados": [
@@ -708,6 +1016,13 @@
       "D": "4",
       "E": "5"
     },
-    "_gabarito": "C"
+    "_gabarito": "C",
+    "filtros": {
+      "questao": "180",
+      "ano": "2017",
+      "area": "Matemática e suas Tecnologias",
+      "materia": [],
+      "conteudo": []
+    }
   }
 }
