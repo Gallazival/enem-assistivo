@@ -15,8 +15,19 @@ $(document).ready(function () {
 
   buscar.postMessage(filtros);
 
+  $('#pular').add('#proxima').click(() => {
+    numero++;
+    render();
+  });
+
+  $('#anterior').click(() => {
+    numero--
+    render();
+  });
+
   function render() {
     questao(questoes[numero]);
+    $('main').hide().show();
   }
 
   function questao(questao) {
@@ -33,10 +44,10 @@ $(document).ready(function () {
       const alternativa = questao.alternativas[letra];
       $('#alternativas').append(`
         <div class="input-group mb-3">
-          <span class="input-group-text font-monospace">${letra}</span>
+          <span class="input-group-text font-monospace">${letra})</span>
           <label for="${letra}" class="form-control">${alternativa}</label>
           <div class="input-group-text">
-            <input name="alternativas" id="${letra}" class="form-check-input mt-0" type="radio" />
+            <input form="resposta" name="alternativas" id="${letra}" value="${letra}" class="form-check-input mt-0" type="radio" required />
           </div>
         </div>
       `);
@@ -56,6 +67,10 @@ $(document).ready(function () {
         <span class="badge rounded-pill text-bg-info fs-6">${co}</span>
       `);
     });
+  }
+
+  function corrigir(questao) {
+
   }
 
   const modal = $('#modal');
@@ -79,7 +94,8 @@ $(document).ready(function () {
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         `);
         break;
-      default:
+      case 'enviar':
+        $('.modal-title').text(`Questão ${questoes[numero].filtros.questao}`);
     }
   });
 });
