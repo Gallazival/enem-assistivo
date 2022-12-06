@@ -15,13 +15,15 @@ $(document).ready(function () {
 
   buscar.postMessage(filtros);
 
-  $('#pular').add('#proxima').click(() => {
-    numero++;
-    render();
-  });
+  $('#pular')
+    .add('#proxima')
+    .click(() => {
+      numero++;
+      render();
+    });
 
   $('#anterior').click(() => {
-    numero--
+    numero--;
     render();
   });
 
@@ -47,7 +49,7 @@ $(document).ready(function () {
           <span class="input-group-text font-monospace">${letra})</span>
           <label for="${letra}" class="form-control">${alternativa}</label>
           <div class="input-group-text">
-            <input form="resposta" name="alternativas" id="${letra}" value="${letra}" class="form-check-input mt-0" type="radio" required />
+            <input form="resposta" name="alternativas" id="${letra}" value="${letra}" class="form-check-input mt-0" type="radio" />
           </div>
         </div>
       `);
@@ -70,7 +72,13 @@ $(document).ready(function () {
   }
 
   function corrigir(questao) {
-
+    return {
+      numero: questao.filtros.questao,
+      resposta: document.forms.resposta.alternativas.value,
+      correta() {
+        return (this.resposta === questao._gabarito);
+      },
+    };
   }
 
   const modal = $('#modal');
@@ -95,7 +103,15 @@ $(document).ready(function () {
         `);
         break;
       case 'enviar':
-        $('.modal-title').text(`Questão ${questoes[numero].filtros.questao}`);
+        $('.modal-title').text(`Questão ${corrigir(questoes[numero]).numero}`);
+        $('.modal-body').html(`
+          <p class="fs-3">Resposta ${corrigir(questoes[numero]).correta() ? "correta" : "incorreta"}!</p>
+        `);
+        $('.modal-footer').html(`
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar à questao</button>
+          <button id="proxima" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.querySelector('#pular').click()">Próxima questão</button>
+        `);
+        break;
     }
   });
 });

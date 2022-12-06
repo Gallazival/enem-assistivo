@@ -38,12 +38,12 @@ function fMateria(questoes, materia) {
   if (!materia) {
     return questoes;
   }
-  return questoes.filter((questao) => questao.filtros.materia === materia);
+  return questoes.filter((questao) => questao.filtros.materia.indexOf(materia) !== -1);
 }
 
 function fConteudo(questoes, conteudo) {
   if (!conteudo) {
     return questoes;
   }
-  return questoes.filter((questao) => questao.filtros.conteudo === conteudo);
+  return questoes.filter((questao) => questao.filtros.conteudo.indeOf(conteudo) !== -1);
 }
