@@ -15,9 +15,7 @@ $(document).ready(function () {
 
   buscar.postMessage(filtros);
 
-  $('#pular')
-    .add('#proxima')
-    .click(() => {
+  $('#proxima').click(() => {
       numero++;
       render();
     });
@@ -29,7 +27,6 @@ $(document).ready(function () {
 
   function render() {
     questao(questoes[numero]);
-    $('main').hide().show();
   }
 
   function questao(questao) {
@@ -108,8 +105,8 @@ $(document).ready(function () {
           <p class="fs-3">Resposta ${corrigir(questoes[numero]).correta() ? "correta" : "incorreta"}!</p>
         `);
         $('.modal-footer').html(`
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar à questao</button>
-          <button id="proxima" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.querySelector('#pular').click()">Próxima questão</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar à questão</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="$('#proxima').click()">Próxima questão</button>
         `);
         break;
     }
