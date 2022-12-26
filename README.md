@@ -21,6 +21,6 @@ isso~~;
 e criar o potão "Próxima Questão" após o botão "Questão anterior",
 faria mais sentido~~;
 
-7. Mesmo sem questão anterior, o botão "Questao anterior" fica disponível;
+7. ~~Mesmo sem questão anterior, o botão "Questao anterior" fica disponível~~;
 
-8. Adicionar a visualização de resposta correta.
+8. ~~Adicionar a visualização de resposta correta~~.
