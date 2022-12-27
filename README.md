@@ -23,4 +23,8 @@ faria mais sentido~~;
 
 7. ~~Mesmo sem questão anterior, o botão "Questao anterior" fica disponível~~;
 
-8. ~~Adicionar a visualização de resposta correta~~.
+8. ~~Adicionar a visualização de resposta correta~~;
+
+9. ~~Embaralhar questões~~;
+
+10. Permitir a seleção de mais um tipo de filtro.
