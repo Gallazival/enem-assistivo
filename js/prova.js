@@ -97,7 +97,7 @@ $(document).ready(function () {
       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar à questão</button>
       <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.querySelector('#proxima').click()">Próxima questão</button>
     `);
-    $('#respostaCerta .modal-title').text(`Questão ${corrigir(questoes[numero]).numero}`);
+    $('#respostaCerta .modal-title').text(`Resposta da Questão ${corrigir(questoes[numero]).numero}`);
     $('#respostaCerta .modal-body').html(`
       <div class="input-group">
         <span class="input-group-text font-monospace">${gabarito})</span>
