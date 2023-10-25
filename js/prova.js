@@ -15,21 +15,24 @@ $(document).ready(function () {
 
   buscar.postMessage(filtros);
 
-  $('#pular')
-    .add('#proxima')
-    .click(() => {
-      numero++;
-      render();
-    });
+  $('#proxima').click(() => {
+    if (numero === questoes.length - 1) {
+      return;
+    }
+    numero++;
+    render();
+  });
 
   $('#anterior').click(() => {
+    if (numero === 0) {
+      return;
+    }
     numero--;
     render();
   });
 
   function render() {
     questao(questoes[numero]);
-    $('main').hide().show();
   }
 
   function questao(questao) {
@@ -75,43 +78,34 @@ $(document).ready(function () {
     return {
       numero: questao.filtros.questao,
       resposta: document.forms.resposta.alternativas.value,
+      gabarito: questao._gabarito,
       correta() {
-        return (this.resposta === questao._gabarito);
+        return this.resposta === this.gabarito;
       },
     };
   }
 
-  const modal = $('#modal');
-  modal.on('show.bs.modal', (e) => {
-    const button = e.relatedTarget;
-    const content = button.getAttribute('data-bs-content');
-    switch (content) {
-      case 'ajuda':
-        $('.modal-title').text('Menu de ajuda');
-        $('.modal-body').html(`
-          <h2 class="fs-5">Controles:</h2>
-          <ul>
-            <li>Use <kbd>&uarr;</kbd>, <kbd>&darr;</kbd>, <kbd>&larr;</kbd> e <kbd>&rarr;</kbd> para navegar nos elementos da página.</li>
-            <li>Use <kbd>Enter</kbd> ou <kbd>Espaço</kbd> para interagir com botões e formulários.</li>
-            <li>Use <kbd>h</kbd> para pular para o próximo cabeçalho e <kbd>Shift</kbd> + <kbd>h</kbd> para voltar ao cabeçalho anterior.</li>
-            <li>Use <kbd>b</kbd> para pular para o próximo botão e <kbd>Shift</kbd> + <kbd>b</kbd> para voltar ao botão anterior.</li>
-            <li>Use <kbd>f</kbd> para pular para o próximo formulário e <kbd>Shift</kbd> + <kbd>f</kbd> para voltar ao formulário anterior.</li>
-          </ul>
-        `);
-        $('.modal-footer').html(`
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        `);
-        break;
-      case 'enviar':
-        $('.modal-title').text(`Questão ${corrigir(questoes[numero]).numero}`);
-        $('.modal-body').html(`
-          <p class="fs-3">Resposta ${corrigir(questoes[numero]).correta() ? "correta" : "incorreta"}!</p>
-        `);
-        $('.modal-footer').html(`
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar à questao</button>
-          <button id="proxima" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.querySelector('#pular').click()">Próxima questão</button>
-        `);
-        break;
-    }
+  const modal = $('#enviarResposta');
+  modal.on('show.bs.modal', () => {
+    const gabarito = `${corrigir(questoes[numero]).gabarito}`;
+    $('#enviarResposta .modal-title').text(`Questão ${corrigir(questoes[numero]).numero}`);
+    $('#enviarResposta .modal-body').html(`
+      <p class="fs-3">Resposta ${corrigir(questoes[numero]).correta() ? 'correta' : 'incorreta'}!</p>
+      <button id="enviar" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#respostaCerta">Exibir resposta correta</button>
+    `);
+    $('#enviarResposta .modal-footer').html(`
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar à questão</button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.querySelector('#proxima').click()">Próxima questão</button>
+    `);
+    $('#respostaCerta .modal-title').text(`Resposta da questão ${corrigir(questoes[numero]).numero}`);
+    $('#respostaCerta .modal-body').html(`
+      <div class="input-group">
+        <span class="input-group-text font-monospace">${gabarito})</span>
+        <span class="form-control">${questoes[numero].alternativas[gabarito]}</span>
+      </div>
+    `);
+    $('#respostaCerta .modal-footer').html(`
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#enviarResposta">Voltar</button>
+    `);
   });
 });
